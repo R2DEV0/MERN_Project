@@ -59,7 +59,7 @@ export default (props) => {
     },[setCount]);
 
     // tracks users answer selections & disables answer once selected //
-    const onClick = (target,idx,test,key) => {
+    const onClick = (target,idx,test) => {
         setPick([...pick, idx]);
         target.disabled='true'
         if(idx === test.right_answer){
@@ -91,7 +91,7 @@ export default (props) => {
                 {quiz.map((test, i) => {return <div key={i} className='test'>
                     <p className='question'>{test.question}</p>
                     {test.answers.map((idx, i)=>{return <button key={i} className='btn btn-secondary btn-sm' 
-                    value={idx} style={{fontWeight:'bold', padding: '5px', marginRight: '5px', marginTop:'5px', color:'whitesmoke', minWidth:'120px'}} onClick={(e)=>{onClick(e.target,idx,test,i)}}> {idx} </button>})}
+                    value={idx} style={{fontWeight:'bold', padding: '5px', marginRight: '5px', marginTop:'5px', color:'whitesmoke', minWidth:'120px'}} onClick={(e)=>{onClick(e.target,idx,test)}}> {idx} </button>})}
                 </div> })}
                 <button className='btn btn-danger btn-md col-6 offset-3' style={{fontWeight:'bold', fontSize:'18px', border:'1px solid red', padding:'10px', marginTop: '1%', background:'darkred', textShadow: '2px 2px 4px red', color:'whitesmoke'}} onClick={submit}>Submit</button>
             </div>}
