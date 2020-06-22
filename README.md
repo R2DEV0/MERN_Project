@@ -1,6 +1,7 @@
 Quiz of Death— Fun Quiz App (React / JavaScript)
 
 This is a  small quiz application built with React and MongoDB for users to answer random questions stored in the database. 
+
 The app includes features such as:
 
 A welcome page, moving  image, and integrated npm software to create a  flowing background that exist throughout the application
